@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-
+import {withRouter} from 'react-router-dom'
 
 
 const Contianer = styled.div`
@@ -60,8 +60,8 @@ const SubTitle = styled.span`
 font-weight: lighter;
 font-size: 16px;
 `;
-const MenuItem = ({title , imageUrl}) => (
-    <Contianer style={{backgroundImage: `url(${imageUrl })`}}>
+const MenuItem = ({title , imageUrl , history , linkUrl , match}) => (
+    <Contianer style={{backgroundImage: `url(${imageUrl })` }} onClick={() => history.push(`${match.url}${linkUrl}`)}>
         <Content>
           <Title> {title.toUpperCase()}</Title>
           <SubTitle> Shop Now   </SubTitle>
@@ -70,5 +70,5 @@ const MenuItem = ({title , imageUrl}) => (
 
 )
 
-export default MenuItem;
+export default withRouter(MenuItem);
 

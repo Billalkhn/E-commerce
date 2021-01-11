@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import Directory from  '../../components/directory/directory';
 
 const Container = styled.div`
 display: flex;
@@ -10,10 +9,10 @@ padding: 20px 80px;
 
 `;
 
-const HomePage = () => (
+const HatsPage = ({}) => (
   <Container>
-     <Directory/>
+      Hello this is Hats page 
   </Container>
       );
 
-export default HomePage;
+export default HatsPage;
